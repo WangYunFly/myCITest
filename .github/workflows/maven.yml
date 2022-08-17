@@ -26,11 +26,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - run: mkdir staging && cp target/*.jar staging
     
-    - uses: "marvinpinto/action-automatic-releases@latest"
+    - uses: actions/upload-artifact@v3
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.RELEASE_VERSION }}"
-        prerelease: false
-        title: "Release ${{ env.RELEASE_VERSION }}"
-        files: |
-          staging/*.jar
+        name: Package
+        path: staging
