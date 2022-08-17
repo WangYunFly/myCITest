@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "D:\\Project\\githubProject"
+		},
+		{
+			"path": "D:\\Project\\Vue"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Vue"
+	}
+}
