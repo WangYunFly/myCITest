@@ -9,9 +9,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-jobs:
+jobs: 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +21,9 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
+        
+    - name: Run tests
+      run: mvn test
     - name: Build with Maven
       #run: mvn -B package --file pom.xml
       run: mvn --batch-mode --update-snapshots verify
